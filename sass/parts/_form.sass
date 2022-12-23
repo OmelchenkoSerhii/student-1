@@ -1,0 +1,251 @@
+.form
+	.nf-form-cont *
+		font-family: $font-family-base
+	.nf-form-wrap
+		.nf-before-form-content
+			display: none
+	.nf-form-content
+		padding: 0
+		.nf-field-container
+			margin-bottom: 0
+		nf-fields-wrap
+			display: flex
+			flex-wrap: wrap
+			margin: -10px
+			nf-field
+				width: 100%
+				padding: 10px
+		input[type=text],input[type=email],input[type=tel],textarea
+			--webkit-appearence: none
+			background: #F7F8FA
+			border: 1px solid #F7F8FA
+			border-radius: 0
+			font-size: 16px
+			font-weight: 600
+			padding: 14px 20px
+			height: 48px
+			color: transparentize($default-text-color, 0.6)
+			transition: 0.3s
+			+max-screen($breakpoint-sm)
+		
+			&:focus
+				color: transparentize($default-text-color, 0.4)
+				border: 1px solid transparentize($default-text-color, 0.3)
+			&::placeholder
+				color: transparentize($default-text-color, 0.7)
+
+			.text-color-white &
+				background: transparent
+				border: 1px solid #FFFFFF
+				height: 66px
+				color: #fff
+				&:focus
+					color: #fff
+					border: 1px solid #FFFFFF
+				&::placeholder
+					color: $color-text-dark
+
+		textarea
+			resize: none
+			height: 130px
+			.text-color-white &
+				height: 130px
+
+		.listselect-container
+			select
+				--webkit-appearence: none
+				background-color: #F7F8FA
+				border: 1px solid #F7F8FA
+				border-radius: 0
+				font-size: 16px
+				font-weight: 600
+				padding: 14px 20px
+				height: 48px
+				color: transparentize($default-text-color, 0.6)
+				transition: 0.3s
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.899' height='6.364' viewBox='0 0 9.899 6.364'%3E%3Cg id='Group' transform='translate(0 1.414) rotate(-45)'%3E%3Crect id='Rectangle' width='2' height='7' transform='translate(0 0)' fill='%23b66ba8'/%3E%3Crect id='Rectangle-2' data-name='Rectangle' width='2' height='7' transform='translate(7 5) rotate(90)' fill='%23b66ba8'/%3E%3C/g%3E%3C/svg%3E%0A")
+				background-repeat: no-repeat
+				background-size: 10px 10px
+				background-position: right 12px center
+				.text-color-white &
+					background-color: #1B1D3B
+					border: 1px solid #1B1D3B
+					height: 66px
+					color: $color-text-dark
+				
+					
+
+		.submit-wrap
+			justify-content: flex-end
+			.nf-field-label
+				display: none
+			.nf-field-element
+				display: flex
+				justify-content: flex-end
+			input,button
+				position: relative
+				display: inline-block
+				box-sizing: border-box
+				transition: 0.3s
+				font-weight: 600
+
+				background-color: $color-primary
+				color: #fff
+				border: 0px
+				border-radius: 0
+
+				height: 70px
+				padding: 14px 20px
+				font-size: 16px
+				line-height: 19px
+				letter-spacing: 0.5px
+				text-align: center
+				transition: 0.3s ease-out
+				cursor: pointer
+
+				padding-right: 50px
+				background-image: url(../assets/images/icon-arrow.svg)
+				background-repeat: no-repeat
+				background-size: 12px 12px
+				background-position: right 20px center
+				&:hover
+					background-color: $color-black
+					color: #fff
+					background-image: url(../assets/images/icon-arrow.svg)
+					background-repeat: no-repeat
+					background-size: 12px 12px
+					background-position: right 20px center
+		.nf-field-label
+			margin-bottom: 5px
+			//display: none
+			label
+				font-family: $font-family-secondary
+				text-transform: uppercase
+				font-size: 19px
+				font-weight: 600
+				letter-spacing: 1.06px
+				line-height: 28px
+				color: $color-primary
+				.ninja-forms-req-symbol
+					display: none
+
+		.html-wrap
+			h4, h4 *
+				font-family: $font-family-secondary
+
+		.file_upload-container
+			background: #fff
+			padding: 24px
+			text-align: center
+			.nf-field-label
+				width: 100%
+				display: none
+				label
+					text-transform: initial
+					letter-spacing: 0
+					text-align: center
+			.nf-fu-fileinput-button
+				padding: 0
+				background: transparent
+				color: $color-primary
+				font-family: $font-family-secondary
+				span
+					color: $color-primary
+					font-family: $font-family-secondary
+					font-size: 16px
+					font-weight: 600
+					display: flex
+					align-items: center
+					&::after
+						content: ''
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.314' height='14.071' viewBox='0 0 11.314 14.071'%3E%3Cg id='Group_25' data-name='Group 25' transform='translate(10.607 1.414) rotate(90)'%3E%3Cpath id='Path' d='M0,7V0H7' transform='translate(0 4.95) rotate(-45)' fill='none' stroke='%23b66ba8' stroke-miterlimit='10' stroke-width='2'/%3E%3Crect id='Rectangle' width='12' height='2' transform='translate(0.657 3.95)' fill='%23b66ba8'/%3E%3C/g%3E%3C/svg%3E%0A")
+						background-repeat: no-repeat
+						background-size: contain
+						background-position: center
+						width: 12px
+						height: 12px
+						margin-left: 12px
+			.nf-fu-progress
+				margin-bottom: 0
+				height: 5px
+				margin-top: 10px
+				.nf-fu-progress-bar
+					background-color: $color-primary
+			.files_uploaded
+				p
+					color: $default-text-color
+					display: flex
+					justify-content: space-between
+					.delete
+						color: $color-primary
+						margin-left: 10px
+					
+	.nf-error .nf-error-msg, .nf-error-msg
+		font-size: 12px
+	.nf-error.field-wrap .nf-field-element:after
+		display: none
+		
+	
+
+.form--newsletter
+	h4
+		padding-bottom: 30px
+		+max-screen($breakpoint-md)
+			padding-bottom: 15px
+	.nf-form-content 
+		nf-fields-wrap
+			display: flex
+			flex-wrap: wrap
+			margin: 0
+			.nf-field-container
+				margin-bottom: 0
+			nf-field
+				width: 100%
+				padding: 0
+				&:nth-child(1)
+					width: 65%
+					+max-screen($breakpoint-sm)
+						width: 65%
+				&:nth-child(2)
+					min-width: 35%
+					width: 35%
+				.nf-field-label
+					display: none
+					
+		.submit-wrap
+			justify-content: flex-end
+			input,button
+				height: 48px
+				padding-right: 20px
+				background-image: none!important
+				width: 100%
+		.nf-field-label
+			margin-bottom: 0
+            
+.form--courses
+	.nf-form-content 
+		nf-fields-wrap
+			nf-field
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(6),
+				&:nth-child(7)
+					width: 50%
+					+max-screen($breakpoint-sm)
+						width: 100%
+
+.form--contact
+	.nf-form-content 
+		nf-fields-wrap
+			nf-field
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					width: 50%
+					+max-screen($breakpoint-sm)
+						width: 100%
+.nf-pass.field-wrap .nf-field-element:after
+	display: none

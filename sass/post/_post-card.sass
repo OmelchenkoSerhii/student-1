@@ -1,0 +1,35 @@
+.posts-section
+    &__heading
+        padding-bottom: 50px
+    &__list
+        margin-top: -30px
+        margin-bottom: -30px
+        li
+            padding-top: 30px
+            padding-bottom: 30px
+
+.post-card
+    &__inner
+        
+    &__image
+        position: relative
+        padding-bottom: 116%
+        margin-bottom: 20px
+        &>img
+            transition: 0.5s ease-in
+        &:hover
+            &>img
+                transform: scale(1.1)
+    &__arrow-btn
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 70px
+        height: 70px
+        img
+            position: absolute
+            width: 13px
+            height: auto
+            top: 50%
+            left: 50%
+            transform: translate3d(-50%,-50%,0)

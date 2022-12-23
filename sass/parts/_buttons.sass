@@ -1,0 +1,27 @@
+.button
+    font-size: 15px
+    max-width: fit-content
+    min-height: 50px
+    border: 1px solid #000
+    border-radius: 10px
+    background: linear-gradient(to right, #1488CC, #2B32B2)
+    padding: 15px 45px
+    transition: 0.5s
+    &:hover
+        border: 1px solid #fff
+        background: transparent
+        color: #fff
+        transition: 0.5s
+    &--outline
+        background: none !important
+        border: 1px solid #fff
+        &:hover
+            background: linear-gradient(to right, #1488CC, #2B32B2)
+            transition: 0.5s
+            border: none
+.buttons-wrapper
+    margin-left: -7.5px
+    margin-right: -7.5px
+    .button
+        margin-left: 7.5px
+        margin-right: 7.5px
